@@ -13,4 +13,13 @@
     <arg name="use_sim_time" value="true"/>
 </include>
 
+<param name="robot_description" command="xacro $(find rrbot_description)/urdf/rrbot_robot.urdf.xacro">
+</param>
+
+<node name="rrbot_model_spawner"
+    pkg="gazebo_ros"
+    type="spawn_model"
+    args="-param robot_description -urdf -model rrbot -unpause"
+/>
+
 </launch>
