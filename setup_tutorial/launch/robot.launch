@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<launch>
+
+<arg name="headless"    default="false" doc="Should the gazebo GUI be launched?" />
+<arg name="world"       default="worlds/empty.world" doc="Filename to a SDF World for gazebo to use" />
+
+<!-- Launches Gazebo with empty environment -->
+<include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(arg world)"/>
+    <arg name="gui" value="$(eval not arg('headless'))"/>
+    <!-- Always start in paused mode, and only unpause when spawning the model -->
+    <arg name="paused" value="true"/>
+    <arg name="use_sim_time" value="true"/>
+</include>
+
+</launch>
