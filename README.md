@@ -6,7 +6,11 @@ Following this tutorial requires the installation of the `rrbot_description` pac
 git clone https://bitbucket.org/theconstructcore/rrbot_pkgs.git
 ```
 
-## Structure of ROS & Gazebo
+## Structure of Gazebo simulations
+
+The structure of most Gazebo simulations are as follows:
+
+<img src="img/gazebo.png" alt="drawing" width="500"/>
 
 ## Launchfile
 
