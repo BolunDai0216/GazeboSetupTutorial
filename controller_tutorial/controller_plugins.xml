@@ -1,0 +1,3 @@
+<library path="lib/libcontroller_tutorial_lib">
+    <class name="controller_tutorial/PositionController" type="controller_ns::PositionController" base_class_type="controller_interface::ControllerBase" />
+</library>

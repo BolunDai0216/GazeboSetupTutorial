@@ -126,3 +126,17 @@ To command to create a package for a custom controller with the basic dependecie
 ```console
 catkin_create_pkg my_controller roscpp pluginlib controller_interface hardware_interface
 ```
+
+Then a `controller_plugins.xml` needs to be created and filled. The next step is to go to the `package.xml` file of your package. Inside the `<export>` tag, place the following line:
+
+```xml
+<controller_interface plugin="${prefix}/controller_plugins.xml"/>
+```
+
+Finally, we need to updated the `CMakeLists.txt` file to include
+
+```cmake
+add_compile_options(-std=c++11)
+add_library(controller_tutorial_lib src/controller.cpp)
+target_link_libraries(controller_tutorial_lib ${catkin_LIBRARIES})
+```
