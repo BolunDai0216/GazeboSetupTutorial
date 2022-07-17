@@ -118,3 +118,11 @@ optional arguments:
 ```
 
 In the above example the `args`: `joint1_position_controller joint2_position_controller joint_state_controller` represents the loaded controllers.
+
+## Create custom controller
+
+To command to create a package for a custom controller with the basic dependecies required is
+
+```console
+catkin_create_pkg my_controller roscpp pluginlib controller_interface hardware_interface
+```
